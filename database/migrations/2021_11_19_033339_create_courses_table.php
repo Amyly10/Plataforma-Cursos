@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-use app\Models\Course;
-
+use App\Models\Course;
 class CreateCoursesTable extends Migration
 {
     /**
@@ -18,7 +17,7 @@ class CreateCoursesTable extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
 
-            $table->string('tittle');
+            $table->string('title');
             $table->string('subtitle');
             $table->text('description');
             $table->enum('status', [Course::BORRADOR, Course::REVISION, Course::PUBLICADO])->default(Course::BORRADOR);
