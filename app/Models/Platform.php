@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Price extends Model
+class Platform extends Model
 {
-    protected $guarded = ['id'];
-
     use HasFactory;
 
+    protected $guarded = ['id'];
+
     //Relacion uno a muchos
-    public function courses(){
-        return $this->hasMany('App\Models\Course');
+    public function lessons(){
+        return $this->hasMany('App\Models\Lesson');
     }
 }
