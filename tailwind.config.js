@@ -17,5 +17,10 @@ module.exports = {
         },
     },
 
+        corePlugins: {
+          // ...
+         container: false,
+        },
+
     plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 };
