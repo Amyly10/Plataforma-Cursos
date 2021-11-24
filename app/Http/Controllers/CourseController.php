@@ -21,4 +21,8 @@ class CourseController extends Controller
             ->get();
         return view('courses.show', compact('course', 'similares'));
     }
+
+    public function enrolled(Course $course){
+        return $course;
+    }
 }

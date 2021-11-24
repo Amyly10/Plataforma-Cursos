@@ -93,8 +93,11 @@
                         </div>
                     </div>
 
-                    <a href="" class="btn btn-danger btn-block mt-4">Llevar este urso</a>
-
+                    <form action="{{route('courses.enrolled', $course)}}" method="post">
+                        @csrf
+                        <a href=""></a>
+                        <button class="btn btn-danger btn-block mt-4" type="submit">Llevar este curso</button>
+                    </form>
 
                 </div>
             </section>
