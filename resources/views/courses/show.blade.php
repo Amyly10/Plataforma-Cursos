@@ -93,11 +93,19 @@
                         </div>
                     </div>
 
-                    <form action="{{route('courses.enrolled', $course)}}" method="post">
-                        @csrf
-                        <a href=""></a>
-                        <button class="btn btn-danger btn-block mt-4" type="submit">Llevar este curso</button>
-                    </form>
+                    @can('enrolled', $course)
+
+                    <a class="btn btn-danger btn-block mt-4" href="{{route('course.status', $course)}}">Continuar con el curso</a>
+
+                    @else
+
+                        <form action="{{route('courses.enrolled', $course)}}" method="post">
+                            @csrf
+                            <a href=""></a>
+                            <button class="btn btn-danger btn-block mt-4" type="submit">Llevar este curso</button>
+                        </form>
+
+                    @endcan
 
                 </div>
             </section>
