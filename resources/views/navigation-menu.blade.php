@@ -31,7 +31,6 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-
                     @foreach ($nav_links as $nav_link)
 
                         <x-jet-nav-link href="{{ $nav_link['route']  }}" :active="$nav_link['active']">
@@ -42,7 +41,9 @@
                 </div>
             </div>
 
+            <!--Settings Dropdown-->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
+
                 <!-- Teams Dropdown -->
                 @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
                     <div class="ml-3 relative">
@@ -124,7 +125,11 @@
             <div class="mt-3 space-y-1">
                 <!-- Account Management -->
                 <x-jet-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
-                    {{ __('Profile') }}
+                    Perfil
+                </x-jet-responsive-nav-link>
+
+                <x-jet-responsive-nav-link href="{{ route('instructor.courses.index') }}" :active="request()->routeIs('profile.show')">
+                    Instructor
                 </x-jet-responsive-nav-link>
 
                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
@@ -268,7 +273,6 @@
 
         <!-- Responsive Settings Options -->
         @auth
-
         <div class="pt-4 pb-1 border-t border-gray-200">
 
             <div class="flex items-center px-4">
@@ -287,7 +291,11 @@
             <div class="mt-3 space-y-1">
                 <!-- Account Management -->
                 <x-jet-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
-                    {{ __('Profile') }}
+                    Perfil
+                </x-jet-responsive-nav-link>
+
+                <x-jet-responsive-nav-link href="{{ route('instructor.courses.index') }}" :active="request()->routeIs('instructor.courses.index')">
+                    Instructor
                 </x-jet-responsive-nav-link>
 
                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())

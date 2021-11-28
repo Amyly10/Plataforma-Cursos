@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CourseController;
 
+use App\Http\Livewire\CourseStatus;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,7 +29,6 @@ Route::get('cursos/{course}', [CourseController::class, 'show'])->name('courses.
 
 Route::post('courses/{course}/enrolled', [CourseController::class, 'enrolled'])->middleware('auth')->name('courses.enrolled');
 
+Route::get('course-status/{course}', CourseStatus::class)->name('courses.status')->middleware('auth');
 
-Route::get('course-status/{course}', function ($course) {;
-    return "Aqui vas a poder llevar el control de tu avance";
-})->name('course.status');
+

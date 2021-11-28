@@ -33364,6 +33364,21 @@ select {
   color: rgba(55, 65, 81, var(--tw-text-opacity));
 }
 
+.embed-resposive{
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.embed-responsive iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 70%;
+  border: 0;
+}
+
 @media(min-with:640px){
   .container{
     padding-left: 1.5rem;
