@@ -9,11 +9,11 @@
 @section('content')
     <div class="card">
         <div class="card-body">
-            {!! Form::open(['route' => 'admin.roles.store']) !!}
+            {!! Form::open(['route' =>'admin.roles.store']) !!}
 
                 @include('admin.roles.partials.form')
 
-                {!! Form::submit('Crear Role', ['class' => 'btn btn-primary mt-2']) !!}
+                {!! Form::submit('Crear role', ['class' => 'btn btn-primary mt-2']) !!}
 
             {!! Form::close() !!}
         </div>

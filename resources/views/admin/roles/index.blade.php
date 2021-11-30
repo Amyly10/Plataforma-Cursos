@@ -27,12 +27,11 @@
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
-                        <th colspan="2"></th>
+                        <th col-span="2"></th>
                     </tr>
                 </thead>
 
                 <tbody>
-
                     @forelse ($roles as $role)
                         <tr>
                             <td>{{$role->id}}</td>
@@ -48,16 +47,13 @@
                                     @csrf
 
                                     <button class="btn btn-danger" type="submit">Eliminar</button>
-
                                 </form>
                             </td>
                         </tr>
                     @empty
-
-                    <tr>
-                        <td colspan="4">No hay ningun rol registrado</td>
-                    </tr>
-
+                        <tr>
+                            <td colspan="4">No hay ningún rol registrado</td>
+                        </tr>
                     @endforelse
                 </tbody>
             </table>

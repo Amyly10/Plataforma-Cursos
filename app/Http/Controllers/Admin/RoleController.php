@@ -55,7 +55,7 @@ class RoleController extends Controller
 
         $role->permissions()->attach($request->permissions);
 
-        return redirect()->route('admin.roles.index')->with('infor', 'El rol se creo exitosamente');
+        return redirect()->route('admin.roles.index')->with('info', 'El rol se creo exitosamente');
     }
 
     /**
